@@ -1,45 +1,29 @@
-🎵 musictw - Music Social Network (WIP)
+# 🎵 MusicTW - Music-Oriented Social Network (Under Refactoring)
 
-Status: 🚧 Work In Progress (Active Development)
+**Status:** 🚧 Active Development & Modernization
 
-📌 Project Overview
+## 📌 About the Project
+MusicTW is a social network project for music lovers, which I started during my early days of software development. Initially, I built it as a Windows Forms desktop application using an N-Tier architecture just to get a working product.
 
-musictw is a backend-focused project aiming to build a scalable and structured RESTful API for a music-oriented social interaction platform. The primary goal of this project is not just to create a working application, but to implement solid architectural patterns, relational database design, and clean code principles.
+However, in line with my current engineering vision, I am actively refactoring this project. The goal is to migrate it from a legacy desktop app into a scalable **RESTful API** adhering to **Clean Architecture** principles.
 
-⚙️ Tech Stack & Tools
+## ⚙️ Current Tech Stack & Architecture
+Currently, the core database architecture and business logic layers (BLL & DAL) are decoupled:
+* **Language:** C#
+* **Presentation Layer:** Windows Forms (To be completely deprecated and replaced by a Web API soon)
+* **Data Access & ORM:** Entity Framework 6 (EF)
+* **Database:** MS SQL Server / T-SQL
+* **Architecture:** N-Tier (Data Access, Business Logic, Presentation)
 
-Language: C#
+## 🚀 Refactoring Roadmap
+My plan to transition this project from its initial state to enterprise standards:
 
-Framework: .NET (Backend API)
+- [x] Design relational database tables (Users, Posts) using T-SQL.
+- [x] Isolate DAL (Data Access Layer) and BLL (Business Logic Layer) using EF.
+- [ ] **Deprecate the desktop dependency and migrate to ASP.NET Core Web API.**
+- [ ] Integrate Clean Architecture and Repository/Unit of Work patterns.
+- [ ] Implement JWT (JSON Web Token) for secure authentication.
+- [ ] Refactor dependencies to be loosely coupled (Dependency Injection).
 
-Database: MS SQL Server / T-SQL
-
-Architecture: N-Tier / Clean Architecture Principles
-
-🏗️ Architectural Approach
-
-Instead of a monolithic "spaghetti" code structure, this project is designed with modularity in mind:
-
-Separation of Concerns (SoC): Distinct layers for Data Access, Business Logic, and API presentation.
-
-Relational Database Design: Carefully mapped T-SQL tables for Users, Playlists, Tracks, and Social Interactions (Follows, Likes).
-
-Dependency Injection: Loosely coupled services to ensure testability and maintainability.
-
-🚀 Current Progress
-
-[x] Initial database schema design (Users, Posts, Interactions).
-
-[x] MS SQL Server connection and Data Access Layer (DAL) setup.
-
-[x] Core entity modeling (OOP).
-
-[ ] User Authentication & Authorization (JWT integration planned).
-
-[ ] Endpoints for social interactions (Follow/Unfollow logic).
-
-[ ] Feed generation algorithms.
-
-💡 Developer Note
-
-This project is my ongoing playground for mastering backend systems, complex SQL queries (JOINs, Indexing), and enterprise-level C# architecture. I am continuously refactoring the codebase to adhere to best industry standards.
+## 💡 Developer Note
+This isn't my "perfect" code; it's my personal sandbox where I learn software architecture, database management, and how a system evolves. I am using this project to practice migrating a tightly-coupled structure into a modern, reliable backend system.
