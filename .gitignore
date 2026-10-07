@@ -9,6 +9,14 @@
 *.user
 *.userosscache
 *.sln.docstates
+.env
+.env.*
+!.env.example
+!**/.env.example
+src/backend/MusicTw.Api/appsettings.Local.json
+src/backend/MusicTw.Api/appsettings.*.Local.json
+!src/backend/MusicTw.Api/appsettings.Development.Local.example.json
+src/backend/_temp_build/
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
