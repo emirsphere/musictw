@@ -1,0 +1,11 @@
+namespace MusicTw.Application.DTOs.Songs;
+
+public class SongListItemDto
+{
+    public Guid Id { get; set; }
+    public string Title { get; set; } = null!;
+    public string Artist { get; set; } = null!;
+    public string? Album { get; set; }
+    public string? CoverImageUrl { get; set; }
+    public TimeSpan Duration { get; set; }
+}
